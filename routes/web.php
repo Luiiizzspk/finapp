@@ -36,6 +36,12 @@ Route::middleware([
     }
     )->name('seus_dados');
 
+    //Rota Seus gastos
+    Route::get('/seus_gastos', function () {
+        return view('seus_gastos');
+    }
+    )->name('seus_gastos');
+
     //Rota Nova Entrada - cadastro de receita ou despesa
     Route::get('/nova_entrada', function () {
         return view('nova_entrada');
