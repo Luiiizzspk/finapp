@@ -26,15 +26,25 @@
 
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Seus Dados</a>
+                    <a class="nav-link" href="">Seus Dados</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Extrato</a>
+                <a class="nav-link" href="{{route('extrato') }}">Extrato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Nova Entrada</a>
+                <a class="nav-link" href="{{route('nova_entrada') }}">Nova Entrada</a>
                 </li>
                 @yield('nav-complementar')
+                <li class="nav-item">
+                    <form method="POST" action="{{route('logout')}}">
+                        @csrf
+                        <a class="nav-link" href="{{ route('logout') }}" 
+                            onclick="event.preventDefault();
+                            this.closest('form').submit(); ">
+                            SAIR
+                        </a>
+                    </form>
+                </li>
             </ul>
         </div>
         <div class="col-md-9 ">
