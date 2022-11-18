@@ -20,7 +20,9 @@
             <div class="text-center">
                 <i class="fa-solid fa-user"></i>
                 <p class="text-center fw-bold">
-                    Olá fulano
+                    Olá <?php $user = auth()->user(); echo $user->name; ?>
+                    <br>
+                    email: <?php echo $user->email; ?>
                 </p>
             </div>
 
