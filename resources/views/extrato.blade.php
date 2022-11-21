@@ -13,6 +13,7 @@
     EXTRATO - Saldo: R$ 9.999,00
 </header>
 
+<?php dd($despesas); dd($receitas); ?>
 
 <div class="container d-flex">
     <div class="col-md-6 p-3">
@@ -23,7 +24,11 @@
                 <p class="card-title">Title</p>
                 <p class="card-text">R$ 999.999,99</p>
             </div>
-            <div class="card-footer">18/11/2022</div>
+            <div class="card-footer">
+                18/11/2022
+                <a href="#" class="mx-3"><i class="fa-solid fa-trash"></i></i></a>
+                <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
         </div>
     </div>
 
@@ -35,10 +40,14 @@
                 <p class="card-title">Title</p>
                 <p class="card-text">R$ 999.999,99</p>
             </div>
-            <div class="card-footer">18/11/2022</div>
+            <div class="card-footer">
+                18/11/2022
+                <a href="#" class="mx-3"><i class="fa-solid fa-trash"></i></a>
+                <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
         </div>
     </div>
-    </div>
+</div>
 </div>
 
 @endsection

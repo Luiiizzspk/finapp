@@ -26,10 +26,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     //Rota extrato
-    Route::get('/extrato', function () {
-        return view('extrato');
-    }
-    )->name('extrato');
+    Route::get('/extrato',[MovimentoController::class, 'get_movimentos'])->name('extrato');
 
     //Rota Seus Dados
     Route::get('/seus_dados', function () {
