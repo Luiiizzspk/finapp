@@ -47,4 +47,18 @@ class MovimentoController extends Controller
         //Após gravar os dados, redireciona para a rota "extrato"
         return redirect('extrato');
     }
+
+    //Carre o formulario de edição com os dados do registro
+    public function get_movimento($id){
+        //carrega o movimento  onde o id = $id
+        $movimento = Fin_movimento::findOrFail($id);
+
+        return view('form_atualiza', ['movimento' => $movimento]);
+    }
+
+    public function atualizar(Request $request){
+        Fin_movimento::findOrFail($request->id)->update($request->all());
+
+        return redirect('extrato');
+    }
 }
