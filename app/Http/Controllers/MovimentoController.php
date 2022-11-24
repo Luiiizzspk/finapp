@@ -61,4 +61,10 @@ class MovimentoController extends Controller
 
         return redirect('extrato');
     }
+
+    public function deletar($id){
+        Fin_movimento::findOrFail($id)->delete();
+
+        return redirect('extrato');
+    }
 }
