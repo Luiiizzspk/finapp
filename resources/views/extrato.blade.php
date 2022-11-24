@@ -16,7 +16,7 @@
 
 <div class="container d-flex">
     <div class="col-md-6 p-3">
-        <h2>Receitas: R$ {{$totReceitas}}</h2>
+        <h2>Receitas: R$ {{ number_format($totReceitas, 2,',','.')}}</h2>
 
         @if(count($receitas) == 0)
             <p>Não há movimentações de receitas</p>
@@ -45,7 +45,7 @@
     </div>
 
     <div class="col-md-6 p-3">
-        <h2>Despesas: R$ {{$totDespesas}}</h2>
+        <h2>Despesas: R$ {{number_format($totDespesas, 2,',','.')}}</h2>
 
         @if(count($despesas) == 0)
             <p>Não há movimentações de despesas</p>
